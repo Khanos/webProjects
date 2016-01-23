@@ -4,20 +4,20 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      all: ['Gruntfile.js', 'main/**/*.js']
+      all: ['Gruntfile.js', 'app/**/*.js']
     },
     watch: {
       options: {
         livereload: true,
       },
       css: {
-        files: ['css/**/*.css'],
+        files: ['assets/css/**/*.css'],
       },
       js: {
-        files: ['Gruntfile.js'],
+        files: ['Gruntfile.js', 'app/**/*.js', 'assets/js/**/*.js'],
       },
       html: {
-        files: ['*.html'],
+        files: ['index.html', 'app/shared/**/*.html'],
       }
     },
     connect: {
